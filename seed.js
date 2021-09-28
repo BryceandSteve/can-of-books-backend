@@ -2,7 +2,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const Book = require('./models/book.js')
-mongoose.connect(process.env.DATABASE_URL);
 
 
 async function seed(){
@@ -33,8 +32,7 @@ async function seed(){
     });
         console.log('book is here');
 
-        mongoose.disconnect();
 };
 
-seed();
+module.exports = seed;
 console.log(seed)
