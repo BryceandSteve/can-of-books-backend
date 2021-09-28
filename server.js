@@ -15,7 +15,7 @@ app.get('/books', async (request, response) => {
   const searchQuery = {};
   if (request.query.string){
     console.log(books)
-    searchQuery.genre.string = request.query.string;
+    searchQuery.query.string = request.query.string;
   }
   const books = await Book.find(searchQuery);
   response.send(books);
