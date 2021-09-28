@@ -4,9 +4,9 @@ const { Schema } = mongoose;
 
 const bookSchema = new Schema({
   title: String,
-  genre: String,
   description: String,
-  checkedIn: Boolean,
+  status: String,
+  email: String,
 });
 
 

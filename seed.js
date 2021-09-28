@@ -8,7 +8,7 @@ async function seed(){
     await Book.create({
         Title: 'The Black Tattoo',
         description: 'There is a tattoo, and it is black.',
-        checkedIn: true,
+        status: available,
         email: 'brycebot@gmail.com'
     });
          console.log('book is here');
@@ -17,7 +17,7 @@ async function seed(){
     await Book.create({
         Title: 'SuperHuman',
         description: 'They are like superman, but if they were teenagers, and only had one power apiece.',
-        checkedIn: false,
+        status: available,
         email: 'Isteve@id.apple.com'
     });
 
@@ -27,12 +27,13 @@ async function seed(){
     await Book.create({
         Title: 'DragonBall Z',
         description: '(s)He\'s over 9000!',
-        checkedIn: true,
+        status: available,
         email: 'Isara@id.apple.com'
     });
         console.log('book is here');
+        mongoose.disconnect();
 
 };
 
-module.exports = seed;
+seed();
 console.log(seed)
