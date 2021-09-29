@@ -2,7 +2,7 @@
 
 const Book = require('../models/books.js')
 
-async function grabBooks (request, response){
+const grabBooks = async (request, response) => {
     try {
         const entry = {};
         if (request.query.email){
