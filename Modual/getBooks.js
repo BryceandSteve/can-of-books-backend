@@ -1,6 +1,6 @@
 'use strict'
 
-const Book = require('../models/book.js')
+const Book = require('../models/books.js')
 
 async function grabBooks (request, response){
     try {

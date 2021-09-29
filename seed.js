@@ -1,7 +1,7 @@
 'use strict'
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Book = require('./models/book.js')
+const Book = require('./models/books.js')
 
 
 async function seed(){
